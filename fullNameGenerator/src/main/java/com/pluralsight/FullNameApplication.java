@@ -23,8 +23,10 @@ public class FullNameApplication {
         String fullname = "";
         if (middlename.isEmpty()){
             fullname = firstname +" "+ lastname;
-        } else{
+        } else if (suffix.isEmpty()){
             fullname = firstname +" "+ middlename +" "+ lastname;
+        }else{
+            fullname = firstname +" "+" "+ middlename +" "+ lastname +" "+ suffix;
         }
 
 
