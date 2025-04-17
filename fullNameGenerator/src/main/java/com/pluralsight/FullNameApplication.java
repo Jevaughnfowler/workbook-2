@@ -3,6 +3,7 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class FullNameApplication {
+
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
@@ -29,7 +30,6 @@ public class FullNameApplication {
 
         if (!suffix.isBlank()){
             fullname += ", " + suffix;
-
 
         }
 
