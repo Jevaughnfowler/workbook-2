@@ -1,25 +1,34 @@
 package com.pluralsight;
 
 public class CellPhone {
-  private int serialNumber;
-  private String phoneNumber;
-  private String Model;
-  private String carrier;
-  private String owner;
+    private int serialNumber;
+    private String phoneNumber;
+    private String model;
+    private String carrier;
+    private String owner;
 
+    // Default constructor
+    public CellPhone() {
+        this.serialNumber = 0;
+        this.model = "";
+        this.carrier = "";
+        this.phoneNumber = "";
+        this.owner = "";
+    }
 
+    // Dialing a number directly
+    public void dial(String phoneNumber) {
+        System.out.printf("%s's Cell phone is dialing the number %s from the number %s\n",
+                this.owner, phoneNumber, this.phoneNumber);
+    }
 
-  public CellPhone() {
-      this.serialNumber = 0;
-      this.Model = "";
-      this.carrier = "";
-      this.phoneNumber = "";
-      this.owner = "";
+    // Dialing another CellPhone
+    public void dial(CellPhone phone) {
+        System.out.printf("%s's Cell phone is dialing the number %s from the number %s\n",
+                this.owner, phone.getPhoneNumber(), this.phoneNumber);
+    }
 
-  }
-
-    //getter and setter
-
+    // Getters and Setters
     public int getSerialNumber() {
         return serialNumber;
     }
@@ -37,11 +46,11 @@ public class CellPhone {
     }
 
     public String getModel() {
-        return Model;
+        return model;
     }
 
     public void setModel(String model) {
-        Model = model;
+        this.model = model;
     }
 
     public String getCarrier() {
